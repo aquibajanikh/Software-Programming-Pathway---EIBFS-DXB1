@@ -1,0 +1,32 @@
+#parent{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+img{
+    width: 250px;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: rgb(61, 61, 192);
+    color: #FFFFFF;
+    border:none
+}
+
+.child{
+    width: 25%;
+    background-color: crimson;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+header{
+    display: flex;
+    text-align: center;
+}
+
+#logo{
+    width: 10%;
+}

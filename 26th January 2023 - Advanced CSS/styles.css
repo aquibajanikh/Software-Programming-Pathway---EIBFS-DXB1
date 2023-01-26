@@ -1,0 +1,33 @@
+/* Universal Selector / Global Selector */
+/* * {
+    font-family: 'Verdana';
+    background-color: pink;
+} */
+
+/* HTML Selector / Element Selector */
+/* li{
+    background-color: gray;
+}
+
+p{
+    background-color: yellow;
+} */
+
+/* Class Selector */
+/* .lab01{
+    text-decoration: underline;
+    background-color: aqua;
+} */
+
+/* ID Selector */
+/* #special{ */
+    /* text-transform: uppercase; */
+    /* background-color: yellow; */
+    /* border-width: 2px;
+    border-color: red;
+    border-style: solid; */
+    /* border: 2px solid red;
+    padding: 30px;
+    width: 70%;
+    margin: auto; */
+/* } */
