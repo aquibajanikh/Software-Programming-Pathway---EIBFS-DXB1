@@ -1,0 +1,20 @@
+section{
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+#leftMenu{
+    background-color: black;
+    color: wheat;
+}
+
+#rightContent{
+    display: flex;
+}
+
+#chatbot{
+    width: 100px;
+    position:fixed;
+    bottom: 30px;
+    right: 30px;
+}
