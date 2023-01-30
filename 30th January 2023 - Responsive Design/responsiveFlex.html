@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: grid;
+            grid-template-columns: 30% 70%;
+        }
+
+        #special{
+            background-color: black;
+            color: white;
+        }
+
+        /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    /* Show One column on the phone */
+    section{
+        grid-template-columns: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* Show One column on the phone */
+    section{
+        grid-template-columns: 100%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* Show two columns on all other sizes */
+    section{
+        grid-template-columns: 30% 70%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    /* Show two columns on all other sizes */
+    section{
+        grid-template-columns: 30% 70%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* Show two columns on all other sizes */
+    section{
+        grid-template-columns: 30% 70%;
+    }
+}
+    </style>
+</head>
+<body>
+    <section>
+        <p id="special">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis molestias iste alias odit, minima, architecto consectetur aut nulla dicta aliquam excepturi recusandae. Voluptatibus vero, ex dolor quod voluptate ipsum iste.</p>
+        <div><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis molestias iste alias odit, minima, architecto consectetur aut nulla dicta aliquam excepturi recusandae. Voluptatibus vero, ex dolor quod voluptate ipsum iste.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis molestias iste alias odit, minima, architecto consectetur aut nulla dicta aliquam excepturi recusandae. Voluptatibus vero, ex dolor quod voluptate ipsum iste.</p></div>
+    </section>
+</body>
+</html>
