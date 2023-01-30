@@ -1,0 +1,12 @@
+@keyframes growShrink {
+    from{font-size: 16px;background-color: yellow;}
+    50%{font-size: 32px;background-color: crimson;}
+    to{font-size:16px;background-color: yellow;}
+}
+
+p{
+    animation-name: growShrink;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-timing-function: ease-in-out;
+}
