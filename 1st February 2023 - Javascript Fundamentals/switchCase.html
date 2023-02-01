@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <h1>Choose an option : </h1>
+    <ol>
+        <li>
+            <p>Create an account</p>
+        </li>
+        <li>
+            <p>View Balance</p>
+        </li>
+        <li>
+            <p>Transfer Money</p>
+        </li>
+    </ol>
+    <input min="1" max="3" type="number" id="userChoice" placeholder="Choose an option">
+    <button onclick="readChoice()" id="proceedButton">Proceed</button>
+    <h3 id="userResult"></h3>
+
+
+
+
+    <script>
+        // 1. Detect the button click
+        function readChoice()
+        {
+            // 2. Read choice from the user
+            userChoice = parseInt(document.getElementById("userChoice").value);
+            // 3. Check the choice and show result
+            switch(userChoice)
+            {
+                case 1 : document.getElementById("userResult").innerText = "You chose option 1"; break;
+                case 2 : document.getElementById("userResult").innerText = "You chose option 2"; break;
+                case 3 : document.getElementById("userResult").innerText = "You chose option 3"; break;
+                default : document.getElementById("userResult").innerText = "Please choose an option";
+            }
+        }
+        
+
+        
+    </script>
+</body>
+</html>

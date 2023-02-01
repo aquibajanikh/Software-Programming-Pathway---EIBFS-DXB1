@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="finalBill"></h1>
+    <script>
+        totalBillAmount = 1050.00;
+        productQuantity = 5;
+        discount = 0.00;
+        billAfterDiscount = totalBillAmount;
+        // if(totalBillAmount > 1000.00 && productQuantity > 3)
+        if(totalBillAmount > 1000.00 || productQuantity > 3)
+        {
+            discount = 5.00;
+            billAfterDiscount = totalBillAmount - ((discount/100)*totalBillAmount);
+        }
+        else
+        {
+            discount = 0.00;
+        }
+        document.getElementById("finalBill").innerText = billAfterDiscount;
+    </script>
+</body>
+</html>

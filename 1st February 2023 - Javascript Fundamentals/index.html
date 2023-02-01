@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="finalBill"></h1>
+    <script>
+        totalBillAmount = 100.50;
+        billAfterDiscount = totalBillAmount;
+        discount = 0.00;
+        const tax = 0.05;
+        if(totalBillAmount > 1000.00)
+        {
+            discount = 5.00;
+            billAfterDiscount = totalBillAmount - ((discount/100)*totalBillAmount);
+        }
+        else
+        {
+            discount = 0.00;
+        }
+        billWithTax = billAfterDiscount + (billAfterDiscount*tax);
+        document.getElementById("finalBill").innerText = billWithTax;
+        // productQuantity = 10;
+        // productName = 'Car';
+        // const VAT = 5.00;
+    </script>
+</body>
+</html>
