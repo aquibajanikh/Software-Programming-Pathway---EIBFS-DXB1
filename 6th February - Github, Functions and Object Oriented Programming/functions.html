@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="dayNumber" min="1" max="7">
+    <button id="submitButton" onclick="calculateDay()">Submit</button>
+    <h1 id="outputDay"></h1>
+    <script>
+        today=0;
+        function calculateDay(){
+            dayNumber = document.getElementById("dayNumber").value;
+            switch(dayNumber)
+            {
+                case '1' :
+                        today = "Monday";
+                break;
+                case '2' : today = "Tuesday";break;
+                case '3' : today = "Wednesday";break;
+                case '4' : today = "Thursday";break;
+                case '5' : today = "Friday";break;
+                case '6' : today = "Saturday";break;
+                case '7' : today = "Sunday";break;
+                default : today = "Choose a day";
+            }
+            document.getElementById("outputDay").innerText = today;
+        }
+        
+        
+
+
+
+
+
+
+
+
+
+
+        // function nameOfTheFunction(num1)
+        // {
+        //     function body
+        //     return result;
+        // }
+
+        // function calculateDay(dayNumber){
+        //     if(dayNumber==1){
+        //         return "Monday";
+        //     } else if (dayNumber==2){
+        //         return "Tuesday";
+        //     } else {
+        //         return "Wednesday";
+        //     }
+        // }
+        // today = calculateDay(1);
+        // alert("It is "+today);
+
+        // function calculateDiscount(totalAmount){
+        //     if(totalAmount>2000.00){
+        //         return 0.05;
+        //     } else {
+        //         return 0;
+        //     }
+        // }
+
+        // finalDiscount = calculateDiscount(1000.00);
+        // document.getElementById("totalDiscount").innerText = finalDiscount;
+
+
+            // 1. Create the input field
+            // 2. Create the submit button
+            // 3. Create a heading for displaying the output
+            // ----------------
+            // 4. Create a function to calculate day
+            // 5. Read the day number from the user
+            // 6. Write switch to decide day
+            // 7. Show the day on the screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
