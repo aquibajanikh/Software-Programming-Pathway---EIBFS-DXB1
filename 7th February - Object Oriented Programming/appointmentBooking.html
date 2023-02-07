@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking System</title>
+    <link rel="stylesheet" href="appointmentBooking.css">
+</head>
+<body>
+    <h1>Book an Appointment</h1>
+    <section id="wrapper">
+        <div id="bookingForm">
+            <!-- <form action="#" id="userForm"> -->
+                <input type="text" placeholder="Enter your name" id="userName"/>
+                <br>
+                <input type="tel" placeholder="Enter your mobile number" id="userPhone"/>
+                <br>
+                <select id="userReason">
+                    <option value="" selected disabled>Pick a reason</option>
+                    <option value="Account Related">Account Related</option>
+                    <option value="Payment Related">Payment Related</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br>
+                <input type="date" id="userDate"/>
+                <br>
+                <input type="time" id="userTime"/>
+                <br>
+                <button id="bookAppointment" onclick="storeBooking()">Book Now</button>
+                <button id="showBookings" onclick="showBookings()">Show Bookings</button>
+            <!-- </form> -->
+        </div>
+        <div id="bookingList">
+            <table border="1">
+                <caption>Your Bookings</caption>
+                <thead>
+                    <tr>
+                        <th>S No</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Reason</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingContent">
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <p id="tempData"></p>
+    
+    <script src="appointmentBooking.js"></script>
+</body>
+</html>
