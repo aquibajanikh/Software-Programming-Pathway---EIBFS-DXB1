@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="bookTitle">
+    <button onclick="searchBook()">Search Book</button>
+    <hr>
+    <p id="result"></p>
+    <script>
+        // 1. Attach function to the button
+        function searchBook() {
+            // 2. Read the title from the user
+            bookTitle = document.getElementById("bookTitle").value;
+            // 3. Connect to the API
+            // 3.1 Create a Request
+            myRequest = new XMLHttpRequest();
+            // 3.2 Configure the request
+            myRequest.open("GET", "https://www.googleapis.com/books/v1/volumes?q=" + bookTitle);
+            // 3.3 Send the request
+            myRequest.send();
+            // 3.4 Receive the response
+            myRequest.onreadystatechange = () => {
+                if (myRequest.readyState === 4 && myRequest.status === 200) {
+                    // 4. Display the result
+                    document.getElementById("result").innerHTML = myRequest.responseText;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
