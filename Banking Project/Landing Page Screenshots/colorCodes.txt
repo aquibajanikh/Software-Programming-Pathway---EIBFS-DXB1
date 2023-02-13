@@ -1,0 +1,2 @@
+Purple : #9a69ad
+Cream : #fafbd4
