@@ -15,21 +15,32 @@
 
     <form action="#" method="POST" name="loginForm" onsubmit="return validateForm()">
         <input type="text" name="userName" placeholder="Username">
-        <p id="special"></p>
+        <p id="userNameError"></p>
         <input type="password" name="userPassword">
+        <p id="userPasswordError"></p>
         <input type="submit">
     </form>
 
 
-    
+
     <script>
         function validateForm(){
             let userName = document.forms["loginForm"]["userName"].value;
             if(userName.length==0){
-                document.getElementById("special").innerText = "Please enter a username";
+                document.getElementById("userNameError").innerText = "Please enter a username";
                 return false;
             } else if(userName.length<=8 || userName.length >=20){
-                document.getElementById("special").innerText = "Please enter a username between 8 and 20 characters";
+                document.getElementById("userNameError").innerText = "Please enter a username between 8 and 20 characters";
+                return false;
+            }
+
+            // Password
+            let userPassword = document.forms["loginForm"]["userPassword"].value;
+            if(userPassword.length==0){
+                document.getElementById("userPasswordError").innerText = "Please enter a password";
+                return false;
+            } else if(userPassword.length<10){
+                document.getElementById("userPasswordError").innerText = "Please enter a password that is at least 10 characters";
                 return false;
             }
         }
