@@ -40,6 +40,7 @@ allEvents.forEach(event => {
                         <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
                             <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">${event.name}</h3>
                             <p>Seats Left : ${event.seats}</p>
+                            <p id="p_${event.id}"></p>
                             <button id="${event.id}">Book Now</button>
                         </div>
                     </div>
@@ -60,9 +61,11 @@ function checkAvailablity(button) {
     totalSeats = allEvents[buttonID-1].seats;
     console.log(totalSeats);
     if (totalSeats > 0) {
-        document.getElementById("isAvailable").innerText = "Available";
+        // document.getElementById("isAvailable").innerText = "Available";
+        document.getElementById("p_"+buttonID).innerText = "Available";
     } else {
-        document.getElementById("isAvailable").innerText = "Not Available!";
+        // document.getElementById("isAvailable").innerText = "Not Available!";
+        document.getElementById("p_"+buttonID).innerText = "Not Available";
     }
 }
 
