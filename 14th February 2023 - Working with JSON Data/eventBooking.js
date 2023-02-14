@@ -44,21 +44,27 @@ allEvents.forEach(event => {
                         </div>
                     </div>
             </div>`;
-    content+=event;
+    content += event;
 });
 
 document.getElementById("eventList").innerHTML = content;
 
-allButtons = document.getElementsByTagName("button");
+allButtons = document.querySelectorAll("button");
 
+allButtons.forEach((item) => {
+    item.addEventListener('click', ()=>{checkAvailablity(item)})
+});
 
-totalSeats = 10;
-selectedEvent = 2;
-
-if(totalSeats>0)
-{
-    console.log("Available!");
-} else {
-    console.log("Not Available!");
+function checkAvailablity(button) {
+    buttonID = button.id;
+    totalSeats = allEvents[buttonID-1].seats;
+    console.log(totalSeats);
+    if (totalSeats > 0) {
+        document.getElementById("isAvailable").innerText = "Available";
+    } else {
+        document.getElementById("isAvailable").innerText = "Not Available!";
+    }
 }
+
+
 
