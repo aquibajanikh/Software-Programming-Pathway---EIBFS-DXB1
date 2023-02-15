@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <form action="#" name="loginForm">
+        <input type="text"><br>
+        <input type="password" required minlength="10" name="userPassword" placeholder="Password" onkeyup="validatePassword()"/><br>
+        <p id="passwordErrorLC"></p>
+        <p id="passwordErrorUC"></p>
+        <p id="passwordErrorN"></p>
+        <input type="submit">
+    </form>
+
+    <script>
+        function validatePassword(){
+            let userPassword = document.forms["loginForm"]["userPassword"].value;
+            let lowerCaseCheck = /[a-z]/g;
+            let upperCaseCheck = /[A-Z]/g;
+            let numberCheck = /[0-9]/g;
+            if(userPassword.match(lowerCaseCheck)){
+                document.getElementById("passwordErrorLC").innerText="lowercase provided";
+            } else {
+                document.getElementById("passwordErrorLC").innerText="lowercase required";
+            }
+            if(userPassword.match(upperCaseCheck)){
+                document.getElementById("passwordErrorUC").innerText="uppercase provided";
+            } else {
+                document.getElementById("passwordErrorUC").innerText="uppercase required";
+            }
+            if(userPassword.match(numberCheck)){
+                document.getElementById("passwordErrorN").innerText="number provided";
+            } else {
+                document.getElementById("passwordErrorN").innerText="number required";
+            }
+        }
+    </script>
+</body>
+</html>
