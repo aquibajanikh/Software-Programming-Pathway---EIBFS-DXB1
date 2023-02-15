@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <img src="" alt="" id="userImage" />
+    <h2 id="userName"></h2>
+    <h2 id="userEmail"></h2>
+    <button onclick="fetchData()">Fetch Data</button>
+
+    <script>
+        // 1. Connect to the API
+        // 2. Convert the data to Javascript Object
+        // 3. Display Data
+        function fetchData() {
+            fetch("https://randomuser.me/api")
+                .then((response) => response.json())
+                .then((data) => {
+                    document.getElementById("userImage").setAttribute("src", data.results[0].picture.thumbnail);
+                    document.getElementById("userName").innerText = data.results[0].name.title + " " + data.results[0].name.first + " " + data.results[0].name.last;
+                    document.getElementById("userEmail").innerText = data.results[0].email;
+                });
+        }
+    </script>
+</body>
+
+</html>
