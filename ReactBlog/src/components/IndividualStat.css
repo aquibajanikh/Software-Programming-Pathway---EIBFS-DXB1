@@ -1,0 +1,8 @@
+.individualStat{
+    background-color: royalblue;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #00000041;
+    text-align: center;
+    padding: 20px;
+}

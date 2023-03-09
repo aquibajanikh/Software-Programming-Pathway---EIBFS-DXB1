@@ -1,6 +1,11 @@
+import './Header.css';
+
 function Header(){
     return(
-        <p>This is Header</p>
+        <header>
+            <h1>Best Blog Posts</h1>
+            <button>Read Now</button>
+        </header>
     );
 }
 
