@@ -1,0 +1,12 @@
+#dashboard{
+    display: flex;
+    padding: 50px;
+}
+
+#leftMenu{
+    margin-right: 50px;
+}
+
+#applyCard img{
+    width: 250px;
+}
